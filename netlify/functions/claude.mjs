@@ -20,8 +20,7 @@ export default async (request) => {
         "Content-Type":      "application/json",
         "x-api-key":         apiKey,
         "anthropic-version": "2023-06-01",
-        "anthropic-beta":    "web-search-20250305",
-      },
+             },
       body,
     });
 
