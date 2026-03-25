@@ -282,7 +282,7 @@ export default function MorningBriefing() {
     setGeneratedAt(null); setPanel(null);
     fetchWeather();
     for (let i=0; i<SECTIONS.length; i++) {
-      if (i>0) await sleep(600);
+      if (i>0) await sleep(3000);
       await fetchSection(SECTIONS[i]);
     }
     setGeneratedAt(new Date());
