@@ -32,9 +32,8 @@ export default async (request) => {
     });
   } catch (err) {
     return new Response(
-      JSON.stringify({ error: { message: `Proxy error: ${err.message}` } }),
+      JSON.stringify({ error: { message: "Proxy error: " + err.message } }),
       { status: 502, headers: { "Content-Type": "application/json" } }
     );
   }
 };
-```
