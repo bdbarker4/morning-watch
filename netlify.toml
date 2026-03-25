@@ -1,0 +1,15 @@
+[build]
+  command   = "npm install && npm run build"
+  publish   = "dist"
+  functions = "netlify/functions"
+
+[[redirects]]
+  from   = "/api/*"
+  to     = "/.netlify/functions/:splat"
+  status = 200
+
+# Send all other routes to index.html (single-page app)
+[[redirects]]
+  from   = "/*"
+  to     = "/index.html"
+  status = 200
