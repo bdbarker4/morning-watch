@@ -38,4 +38,4 @@ export default async (request) => {
   }
 };
 
-export const config = { path: "/api/claude" };
+export const config = { path: "/api/claude", method: "POST" };
