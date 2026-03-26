@@ -26,11 +26,10 @@ export async function handler(event) {
   try {
     const res = await fetch("https://api.anthropic.com/v1/messages", {
       method: "POST",
-      headers: {
+         headers: {
         "Content-Type": "application/json",
         "x-api-key": apiKey,
-        "anthropic-version": "2023-06-01",
-        "anthropic-beta": "web-search-20250305"
+        "anthropic-version": "2023-06-01"
       },
       body: event.body
     });
